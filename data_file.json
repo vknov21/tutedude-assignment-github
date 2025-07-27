@@ -1,8 +1,8 @@
 {"web-app": {
   "servlet": [   
     {
-      "servlet-name": "cofaxCDS",
-      "servlet-class": "org.cofax.cds.CDSServlet",
+      "servlet-name": "cofixCDS",
+      "servlet-class": "org.cofix.cds.CDSServlet",
       "init-param": {
         "defaultListTemplate": "listTemplate.htm",
         "defaultFileTemplate": "articleTemplate.htm",
