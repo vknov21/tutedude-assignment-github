@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <style>
+      body {
+        background-color: #ffffffff;
+        font-family: sans-serif;
+      }
+      .centered {
+        margin: auto;
+        width: 28%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered">
+      <h1>To Do List</h1>
+      <table border="3" style="width: 100%; text-align: center;">
+        {% if not items %}
+        <tr>
+          <td colspan="2" style="text-align: center;">No items found.</td>
+        </tr>
+        {% else %}
+        <tr>
+          <th>Item Name</th>
+          <th>Item Description</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do Entry</title>
+    </head>
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        input[type="submit"] {
+            margin: 0% 0% 0% 5%;
+            font-size: 20px;
+        }
+        input[type="text"], textarea {
+            font-size: 20px;
+            width: 99%;
+        }
+        .centered {
+            margin: auto;
+            width: 28%;
+            border: 3px solid green;
+            padding: 15px;
+        }
+    </style>
+
+    <body>
+        {% if error %}
+            <label style="color: red;">Error: {{ error }}</label>
+        {% endif %}
+        <div class="centered">
+            <form action="/submittodoitem" method="POST">
+                <label><b>Item Name: </label><br>
+                    <input name="name" type="text"><br>
+                <label>Item Description: </label><br>
+                    <textarea name="description" rows="5" cols="21"></textarea><br>
+                <br><input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
